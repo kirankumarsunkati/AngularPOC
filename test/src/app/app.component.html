@@ -1,1 +1,4 @@
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<mat-sidenav-container>
+<mat-sidenav [(opened)]="opened">sidenav</mat-sidenav>
+<mat-sidenav-container><button mat-button (click)="opened =!opened">Basic</button></mat-sidenav-container>
+</mat-sidenav-container>
