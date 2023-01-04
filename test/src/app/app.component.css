@@ -7,5 +7,15 @@
 .mat-sidenav
 {
     width: 200px;
-    background-color: red;
+    background-color: #fff;
+}
+.mat-icon {
+    padding: 20px;
+}
+.mat-mdc-form-field{
+    padding: 10px 40px;
+}
+.mat-mdc-card-header{
+    padding: 20px;
+    margin: 0 auto;
 }

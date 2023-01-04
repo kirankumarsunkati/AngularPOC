@@ -1,0 +1,53 @@
+<mat-sidenav-container>
+<mat-sidenav [(opened)]="opened">
+  <mat-list role="list">
+    <mat-list-item role="listitem" (click)="dashboard()">Dashboard</mat-list-item>
+    <mat-list-item role="listitem">Info</mat-list-item>
+    <mat-list-item role="listitem">Help</mat-list-item>
+  </mat-list>
+</mat-sidenav>
+<mat-sidenav-container>
+  <mat-icon aria-hidden="false" aria-label="Example menu icon" (click)="opened =!opened" fontIcon="menu"></mat-icon>
+
+  
+    
+      <mat-grid-list cols="3" rowHeight="1:1">
+        
+        <mat-grid-tile></mat-grid-tile>
+        
+        <mat-grid-tile>
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>Welcome </mat-card-title>
+              <mat-card-title> </mat-card-title>
+            </mat-card-header>
+          <mat-card-content>
+  <form #userForm="ngForm" validate (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input matInput type="email" #email="ngModel" [email]="true" required [class.is-invalid]="email.invalid && email.touched" class="form-control buttonsub" id="exampleInputEmail1" name="email" [(ngModel)] = "userModel.email" aria-describedby="emailHelp" placeholder="Enter email">
+        <mat-error *ngIf="email.invalid">Please enter valid email</mat-error>
+      </mat-form-field>
+      <br/>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter enter Password</mat-label>
+        <input matInput type="password" #password="ngModel" required [class.is-invalid]="email.invalid && email.touched" class="form-control buttonsub" id="exampleInputEmail1" name="password" [(ngModel)] = "userModel.password" aria-describedby="emailHelp" placeholder="Enter password">
+        <mat-error *ngIf="password.invalid">Please enter password</mat-error>
+      </mat-form-field>
+      <mat-grid-list cols="1" rowHeight="1:1">
+        <mat-grid-tile>
+      <button *ngIf="userForm.form.valid" mat-flat-button color="primary">Login</button>
+      <button *ngIf="userForm.form.invalid" mat-flat-button disabled="">Login</button>
+    </mat-grid-tile> 
+    </mat-grid-list>
+    </form>
+  </mat-card-content>
+</mat-card>
+  </mat-grid-tile>
+
+     
+  </mat-grid-list>
+  
+  
+    </mat-sidenav-container>
+</mat-sidenav-container>
