@@ -9,16 +9,14 @@ var app = express();
 // Define the JSON parser as a default way 
 // to consume and produce data through the 
 // exposed APIs
-app.use(bodyParser.json());
-
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: true }));
 // Create link to Angular build directory
 // The `ng build` command will save the result
 // under the `dist` folder.
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
-app.use(cors({
-    origin: 'http://localhost:8080'
-  }));
+
 // Init the server
 var server = app.listen(process.env.PORT || 8080, function () {
     var port = server.address().port;
@@ -33,6 +31,11 @@ app.get("/api/status", function (req, res) {
     res.status(200).json({ status: "UP" });
 });
 
-app.get("/api/login", function (req, res) {
+app.get("/api/login", (req, res) => {
+    const response = require(`./mocks/userInfo.json`);
+    res.json(response);
+  });
+
+app.get("/api/login1", function (req, res) {
     res.status(200).json({ status: "down" });
 });
