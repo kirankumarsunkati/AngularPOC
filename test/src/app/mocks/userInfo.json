@@ -1,16 +1,4 @@
 {
-    "aud": [
-        "epm-builder-ssa-sit"
-    ],
-    "auth_time": 1660101132,
-    "avatar": "https://www.gravatar.com/avatar/c5a9bba580b9b09d2d85d0001203bb4f?d=https%3A%2F%2Fui-avatars.com%2Fapi%2Fkirankumar.sunkati%2540honeywell.com%2F300%2F007000%2FFFF",
-    "customer": "pgsdemosit2005test01-default-customer",
-    "family_name": "Kumar",
-    "given_name": "Kiran",
-    "iat": 1660101142,
-    "iss": "https://builder-federated-identity-sit.honeywellforge.com/",
-    "preferred_username": "kirankumar.sunkati@honeywell.com",
-    "rat": 1660101140,
-    "sub": "321c577c-02f1-4060-82b0-fea51565807b",
-    "tenant_id": "pgsdemosit2005test01"
+    "name":"test",
+	"value":"asdf"
 }
