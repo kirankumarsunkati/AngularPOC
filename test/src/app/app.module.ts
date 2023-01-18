@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { AppComponentt } from './app.componentt';
 import { AppComponenttt } from './app.componenttt';
 import { AppComponenttt as dashboard } from './Dashboard/app.componenttt';
+import {MatTableModule} from '@angular/material/table';
+
 import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import {HttpClientModule} from '@angular/common/http';
     MatGridListModule,
     MatListModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

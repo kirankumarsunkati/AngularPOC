@@ -1,2 +1,73 @@
-<div>Form Submit Page</div>
-<button  mat-flat-button  (click)="dashboard()">Proceed to dashboard</button>
+<form #userForm="ngForm" validate (ngSubmit)="onSubmit()">
+    <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-form-field>
+        <mat-label>Enter enter </mat-label>
+        <input matInput type="text" #names="ngModel" required 
+        [class.is-invalid]="names.invalid && names.touched" class="form-control buttonsub"
+         id="exampleInputnames1" name="names" [(ngModel)] = "userModel.names" 
+         aria-describedby="namesHelp" placeholder="Enter names">
+        <mat-error *ngIf="names.invalid">Please enter valid data</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Enter enter</mat-label>
+        <input matInput type="test" #labels="ngModel" required [class.is-invalid]="names.invalid && names.touched" class="form-control buttonsub" id="exampleInputnames1" name="labels" [(ngModel)] = "userModel.labels" aria-describedby="namesHelp" placeholder="Enter labels">
+        <mat-error *ngIf="labels.invalid">Please enter valid data</mat-error>
+      </mat-form-field>
+    <br/>
+    <mat-form-field>
+        <mat-label>Enter enter </mat-label>
+        <input matInput type="text" 
+        class="form-control buttonsub"
+         id="exampleInputnames1" name="names" 
+         aria-describedby="namesHelp" placeholder="Enter names">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Enter enter</mat-label>
+        <input matInput type="test" class="form-control buttonsub" id="exampleInputnames1"
+         name="labels" aria-describedby="namesHelp" placeholder="Enter labels">
+      </mat-form-field>
+    <br/>
+    <mat-form-field>
+        <mat-label>Enter enter </mat-label>
+        <input matInput type="text" 
+        class="form-control buttonsub"
+         id="exampleInputnames1" name="names" 
+         aria-describedby="namesHelp" placeholder="Enter names">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Enter enter</mat-label>
+        <input matInput type="test"  class="form-control buttonsub" id="exampleInputnames1"
+         name="labels"  aria-describedby="namesHelp" placeholder="Enter labels">
+      </mat-form-field>
+    <br/>
+    <mat-form-field>
+        <mat-label>Enter enter </mat-label>
+        <input matInput type="text" 
+        class="form-control buttonsub"
+         id="exampleInputnames1" name="names" 
+         aria-describedby="namesHelp" placeholder="Enter names">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Enter enter</mat-label>
+        <input matInput type="test" class="form-control buttonsub" id="exampleInputnames1" 
+        name="labels" aria-describedby="namesHelp" placeholder="Enter labels">
+      </mat-form-field>
+    <br/>
+    <mat-form-field>
+        <mat-label>Enter enter </mat-label>
+        <input matInput type="text"  
+        class="form-control buttonsub"
+         id="exampleInputnames1" name="names"  
+         aria-describedby="namesHelp" placeholder="Enter names">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Enter enter</mat-label>
+        <input matInput type="test" 
+         class="form-control buttonsub" 
+         id="exampleInputnames1" name="labels" aria-describedby="namesHelp" placeholder="Enter labels">
+      </mat-form-field>
+    <br/>
+      <button *ngIf="userForm.form.valid" mat-flat-button color="primary" style="display: block;margin: 0 auto;">Submit</button>
+      <button *ngIf="userForm.form.invalid" mat-flat-button disabled=""  style="display: block;margin: 0 auto;">Submit</button>
+    </mat-grid-list>
+    </form>

@@ -14,9 +14,12 @@
 }
 .mat-mdc-form-field{
     padding: 10px 40px;
+    display: inline-block;
+    width: 40%;
 }
 .mat-mdc-card-header{
     padding: 20px;
     margin: 0 auto;
+    float: left;
 }
 
