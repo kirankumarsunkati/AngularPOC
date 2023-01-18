@@ -11,12 +11,14 @@ import { MaterialModuleModule } from './material-module/material-module.module';
 import { FormsModule } from '@angular/forms';
 import { AppComponentt } from './app.componentt';
 import { AppComponenttt } from './app.componenttt';
+import { AppComponenttt as dashboard } from './Dashboard/app.componenttt';
 import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     AppComponentt,
-    AppComponenttt
+    AppComponenttt,
+	dashboard
   ],
   imports: [
     BrowserModule,
